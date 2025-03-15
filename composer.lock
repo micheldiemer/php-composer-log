@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b39a9f4590c660eed9c63df734cc6beb",
+    "content-hash": "67a286037e5b03d8660f38ea63c32fe5",
     "packages": [
         {
             "name": "micheldiemer/mbstring",
@@ -101,9 +101,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "beta",
-    "stability-flags": {
-        "micheldiemer/mbstring": 10
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
