@@ -1,0 +1,46 @@
+{
+  "name": "micheldiemer/psr-log",
+  "description": "Custom PSR-3 Logger Implementations. Includes HtmlLogger and interpolate function.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Md\\Log\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Michel Diemer",
+      "email": "michel.diemer@yahoo.fr"
+    }
+  ],
+  "minimum-stability": "beta",
+  "require": {
+    "php": ">=8.1",
+    "psr/log": "^2.0 || ^3.0",
+    "micheldiemer/mbstring": "^1"
+  },
+  "scripts": {
+    "fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix",
+    "fixdry": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --dry-run --diff",
+    "lint": "phplint",
+    "phpstan": "phpstan",
+    "lint2": [
+      "@lint",
+      "@phpstan"
+    ],
+    "full": [
+      "@lint",
+      "@phpstan",
+      "@fix"
+    ],
+    "phpdoc": [
+        "export COMPOSER_PROCESS_TIMEOUT=9000",
+        "@phpdoc-run",
+        "@phpdoc-fix"
+    ],
+    "phpdoc-run": "phpdoc -v",
+    "phpdoc-fix": "php ./vendor/automattic/phpdoc-markdown/bin/html-to-md.php",
+    "test": "echo 'No tests yet'"
+  }
+}
